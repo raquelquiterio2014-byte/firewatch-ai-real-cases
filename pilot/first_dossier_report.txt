@@ -1,0 +1,41 @@
+FIREWATCH AI — Gironde — original CEMS products pilot
+Analysis: bounded_source_product_review
+Engine: deterministic_bounded_source_review
+Status: CONDITIONAL_SOURCE_REVIEW_COMPLETED
+Run: FW-RC-008-PILOT-BASELINE-v1
+Human research review: PENDING in original run; see linked reviews.
+
+PILOT CUTOFF: 2022-07-17T12:00:00+00:00
+Technical source review: AI assistant; independent human approval remains pending.
+Strict responder-time replay eligible: FALSE
+
+P01 | CONDITIONALLY_ADMITTED_BY_CONSERVATIVE_BOUND
+Methodological interval: 2022-07-16T10:40:00+00:00 to 2022-07-17T07:23:29+00:00
+P02 | AVAILABILITY_INTERVAL_CROSSES_CUTOFF
+Methodological interval: 2022-07-17T00:00:00+00:00 to 2022-07-18T00:00:00+00:00
+P03 | AVAILABILITY_INTERVAL_CROSSES_CUTOFF
+Methodological interval: 2022-07-17T10:26:00+00:00 to 2022-07-18T05:37:44+00:00
+
+DOCUMENTED FINDINGS
+[FW-RC-008-P01-O01-v1] The original Landiras first-estimate map depicts a burned-area thematic layer derived by visual interpretation of Sentinel-3 observations acquired on July 16 at 10:40 UTC.
+Source: https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf
+Locator: Page 1, map legend, Map Information and Data sources
+
+[FW-RC-008-P01-O02-v1] The first-estimate product states a source GSD of 300 m, estimated geometric accuracy of 600 m or better, and a minimum mapping unit of 810000 square meters. It cannot establish parcel-level damage or road passability.
+Source: https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf
+Locator: Page 1, Map Information and Data sources; final sentence is a research limitation derived from the coarse product scope
+
+Independent source documents: 1
+Missing context topics: access, exposure, weather
+
+RESEARCH NEXT STEPS
+Human review of source interpretation and temporal assumptions.
+
+LIMITATIONS
+Delivery timezone unknown.
+Historical downloaded-version to delivery linkage not verified.
+AOI02 portal delivery and PDF production have different calendar dates.
+No actual responder receipt or operational validation established.
+No road-status or evacuation inference from a map base layer.
+No confirmed population occupancy or individual outcomes.
+CEMS products are not independent field corroboration.
