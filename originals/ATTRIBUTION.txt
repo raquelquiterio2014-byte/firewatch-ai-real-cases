@@ -1,0 +1,15 @@
+Copernicus Emergency Management Service (© 2022 European Union), [EMSR592] Landiras (AOI01): First Estimate Map
+https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf
+Producer: GAF AG; released by SERTIT
+
+Copernicus Emergency Management Service (© 2022 European Union), [EMSR592] La Teste-de-Buch (AOI02): First Estimate Map
+https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI02_FEP_PRODUCT_r1_RTP01_v1.pdf
+Producer: ITHACA; released by SERTIT
+
+Copernicus Emergency Management Service (© 2022 European Union), [EMSR592] Landiras (AOI01): Delineation Map
+https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_DEL_PRODUCT_r1_RTP01_v1.pdf
+Producer: GAF AG; released by SERTIT
+
+Provider notices remain inside each unchanged PDF.
+Source: https://mapping.emergency.copernicus.eu/about/citation-guidelines/
+Third-party basemap/imagery notices inside the products must be retained; no raw satellite imagery is separately redistributed.
