@@ -1,0 +1,13 @@
+Build date: 2026-10-17
+Final release of the v0.1-v0.4 software research cycle.
+Python compilation: main.py, core.py, research.py, pilot.py, gemini_gateway.py, run_pilot.py passed.
+Automated tests: 77 passed.
+Original source products: 3 official CEMS EMSR592 map PDFs downloaded, text-extracted and rendered for visual source inspection; SHA-256 values verified.
+Temporal pilot: EARLY admits 0 products, PRIMARY admits P01 only (2 records) and withholds P02/P03 (4 records), LATER admits all 3 products (6 records), strict mode admits none.
+Source critique: portal delivery timezone and historical downloaded-version linkage unverified; original availability not fabricated; AOI02 delivery/production calendar-date difference retained.
+Review identity: AI-assisted technical source review completed; no independent human approval created.
+End-to-end pilot: prepared and newly executed primary runs persisted; exported ZIP contains originals, technical review, records, reports, traces and checksums. ZIP integrity passed. Human reviews were empty, as expected before user review.
+Earlier tests cover all-ten document workflow, source anchors, SQLite preservation/idempotence, cutoff exclusion, gateway references, retries/fallback, prompt minimization and export integrity.
+No authenticated live Gemini request performed in build environment. API tests use simulated responses.
+Target Windows/PyCharm GUI still requires visual validation.
+No predictive accuracy, expert fire-service validation, actual responder receipt or operational readiness claimed.
