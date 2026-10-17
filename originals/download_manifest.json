@@ -1,0 +1,23 @@
+[
+  {
+    "name": "EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+    "url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+    "sha256": "39b4b1497fbdf32303d8f376a641ae1e287098f5338e9453053f21a747cc95fa",
+    "bytes": 5279098,
+    "retrieved_on": "2026-10-17"
+  },
+  {
+    "name": "EMSR592_AOI02_FEP_PRODUCT_r1_RTP01_v1.pdf",
+    "url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI02_FEP_PRODUCT_r1_RTP01_v1.pdf",
+    "sha256": "46808328013e486e99d77762472e7cf314469dcb743f044a23204fe5ac9cd6d0",
+    "bytes": 4312091,
+    "retrieved_on": "2026-10-17"
+  },
+  {
+    "name": "EMSR592_AOI01_DEL_PRODUCT_r1_RTP01_v1.pdf",
+    "url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_DEL_PRODUCT_r1_RTP01_v1.pdf",
+    "sha256": "d0fd4ebdbede85af0267d1b7f5412bd6ce976e5059db6730b1805300d517aa10",
+    "bytes": 12034818,
+    "retrieved_on": "2026-10-17"
+  }
+]
