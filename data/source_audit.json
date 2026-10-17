@@ -1,0 +1,212 @@
+[
+  {
+    "url": "https://www.nist.gov/publications/case-study-camp-fire-fire-progression-timeline",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "689cfcfb9e495bad702dfd4b9133aacc9ea60959669174c285d86b5a7a6a72c7",
+    "checks": [
+      {
+        "id": "FW-RC-001-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-001-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-001-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  },
+  {
+    "url": "https://fsri.org/research-update/lahaina-fire-comprehensive-timeline-report-released-attorney-general-hawaii",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "54a6e96ffe7a0b2201b95b44d75a7ae5d4faec38cc67ca08d3665659376d9745",
+    "checks": [
+      {
+        "id": "FW-RC-002-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-002-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-002-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  },
+  {
+    "url": "https://science.nasa.gov/earth/earth-observatory/fires-in-portugal-90423/",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "20233bd6e06566c0ababfa5f4bbd7f17459d29b4bba6f04b8243ee80df869d29",
+    "checks": [
+      {
+        "id": "FW-RC-003-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-003-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-003-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  },
+  {
+    "url": "https://science.nasa.gov/earth/earth-observatory/fires-char-the-pantanal-147269/",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "bfd4f86265d2c25f127be9dc188f351a07186d4cab7c69148ef5da9ee549a860",
+    "checks": [
+      {
+        "id": "FW-RC-004-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-004-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-004-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  },
+  {
+    "url": "https://science.nasa.gov/earth/earth-observatory/fires-and-smoke-engulf-southeastern-australia-146110/",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "e126c60d8048acd90b9a4f899379ba9d9534e643e4db1e3d8392fb66e7883f0b",
+    "checks": [
+      {
+        "id": "FW-RC-005-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-005-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-005-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  },
+  {
+    "url": "https://science.nasa.gov/earth/earth-observatory/wildfire-in-fort-mcmurray-87985/",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "34eb5278f3b718bed1d2507229c792b2182dad0c61f16eacec8f3ec3c0c55e07",
+    "checks": [
+      {
+        "id": "FW-RC-006-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-006-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-006-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  },
+  {
+    "url": "https://www.nasa.gov/image-article/athens-greece-surrounded-by-two-huge-deadly-wildfires/",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "a2ce27bf53ffed351ad0e9d303ff813649da04e1e0b13065c7400c35a85005e9",
+    "checks": [
+      {
+        "id": "FW-RC-007-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-007-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-007-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  },
+  {
+    "url": "https://mapping.emergency.copernicus.eu/activations/EMSR592/DELINEATION/",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "f1712faa5cdbe2aab8e8a572d89a42abaeb14f8162735652a6842ab6eab292de",
+    "checks": [
+      {
+        "id": "FW-RC-008-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-008-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-008-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  },
+  {
+    "url": "https://www.esa.int/ESA_Multimedia/Images/2021/08/Wildfires_ravage_Greek_island_of_Evia",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "47f789c10d409916dfdaf7f35db0ef80e71f73aa29134befd6c4318136d57dcf",
+    "checks": [
+      {
+        "id": "FW-RC-009-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-009-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-009-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  },
+  {
+    "url": "https://science.nasa.gov/earth/earth-observatory/inferno-scars-valparaiso-152417/",
+    "accessed_on": "2026-10-17",
+    "method": "Web retrieval and literal source-anchor matching",
+    "retrieval_text_sha256": "d9ec54e3e87830fc4b4b80c1664f9ab9670f545adc3ff594cbad552a5062fb13",
+    "checks": [
+      {
+        "id": "FW-RC-010-R01-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-010-R02-v1",
+        "anchor_matched": true
+      },
+      {
+        "id": "FW-RC-010-R03-v1",
+        "anchor_matched": true
+      }
+    ],
+    "scope": "Public webpage content; no independent verification of raw incident records."
+  }
+]
