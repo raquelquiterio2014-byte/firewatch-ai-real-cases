@@ -1,0 +1,53 @@
+{
+  "id": "TECHNICAL-REVIEW-FW-RC-008-v1",
+  "case_id": "FW-RC-008",
+  "reviewed_on": "2026-10-17",
+  "reviewer": "Codex (AI assistant)",
+  "reviewer_kind": "AI_ASSISTED_TECHNICAL_SOURCE_REVIEW",
+  "decision": "ACCEPT_FOR_CONDITIONAL_DOCUMENT_RESEARCH_WITH_LIMITATIONS",
+  "human_approval": "PENDING",
+  "scope": "Source-product curation, temporal-bound design and documentary interpretation; not expert fire-service validation.",
+  "dataset_sha256": "75040cbb82a413bf1514309c73d01d80ff99a14f97be6338a8729c8bb8dda930",
+  "checks": [
+    {
+      "check": "Provider and artifact identity",
+      "result": "PASS",
+      "detail": "Three PDFs downloaded from links in the official EMSR592 product listing; IDs and AOIs inspected."
+    },
+    {
+      "check": "Source readability and map content",
+      "result": "PASS",
+      "detail": "PDF text extracted and rendered maps visually inspected."
+    },
+    {
+      "check": "Observation and production dates separated",
+      "result": "PASS",
+      "detail": "Observation times use the UTC fields printed on each map; map production retained at day precision."
+    },
+    {
+      "check": "Original publication instant",
+      "result": "UNRESOLVED",
+      "detail": "Portal delivery timezone and historical version linkage are unverified; conditional intervals replace fabricated exact instants."
+    },
+    {
+      "check": "Temporal leakage check",
+      "result": "PASS_CONDITIONAL",
+      "detail": "Primary cutoff admits only P01; P02 and P03 evidence are withheld. Dataset is never admitted into strict original-record mode."
+    },
+    {
+      "check": "Exposure interpretation",
+      "result": "PASS_WITH_LIMITATIONS",
+      "detail": "Affected population is a map estimate, never casualties or confirmed occupancy; excluded at the primary cutoff."
+    },
+    {
+      "check": "Independence",
+      "result": "LIMITED",
+      "detail": "All pilot maps are from CEMS EMSR592; no independent field corroboration."
+    },
+    {
+      "check": "Human approval",
+      "result": "PENDING",
+      "detail": "No person has been signed or approved on behalf of the user."
+    }
+  ]
+}
