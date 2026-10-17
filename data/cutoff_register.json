@@ -1,0 +1,91 @@
+[
+  {
+    "case_id": "FW-RC-001",
+    "stage": "DOCUMENT_RESEARCH_READY",
+    "cutoffs": [],
+    "original_availability_verified": false,
+    "reason": "Prefilled document research works; original-product temporal curation has not yet been completed. No arbitrary historical cutoff assigned."
+  },
+  {
+    "case_id": "FW-RC-002",
+    "stage": "DOCUMENT_RESEARCH_READY",
+    "cutoffs": [],
+    "original_availability_verified": false,
+    "reason": "Prefilled document research works; original-product temporal curation has not yet been completed. No arbitrary historical cutoff assigned."
+  },
+  {
+    "case_id": "FW-RC-003",
+    "stage": "DOCUMENT_RESEARCH_READY",
+    "cutoffs": [],
+    "original_availability_verified": false,
+    "reason": "Prefilled document research works; original-product temporal curation has not yet been completed. No arbitrary historical cutoff assigned."
+  },
+  {
+    "case_id": "FW-RC-004",
+    "stage": "DOCUMENT_RESEARCH_READY",
+    "cutoffs": [],
+    "original_availability_verified": false,
+    "reason": "Prefilled document research works; original-product temporal curation has not yet been completed. No arbitrary historical cutoff assigned."
+  },
+  {
+    "case_id": "FW-RC-005",
+    "stage": "DOCUMENT_RESEARCH_READY",
+    "cutoffs": [],
+    "original_availability_verified": false,
+    "reason": "Prefilled document research works; original-product temporal curation has not yet been completed. No arbitrary historical cutoff assigned."
+  },
+  {
+    "case_id": "FW-RC-006",
+    "stage": "DOCUMENT_RESEARCH_READY",
+    "cutoffs": [],
+    "original_availability_verified": false,
+    "reason": "Prefilled document research works; original-product temporal curation has not yet been completed. No arbitrary historical cutoff assigned."
+  },
+  {
+    "case_id": "FW-RC-007",
+    "stage": "DOCUMENT_RESEARCH_READY",
+    "cutoffs": [],
+    "original_availability_verified": false,
+    "reason": "Prefilled document research works; original-product temporal curation has not yet been completed. No arbitrary historical cutoff assigned."
+  },
+  {
+    "case_id": "FW-RC-008",
+    "stage": "CONDITIONAL_ORIGINAL_PRODUCT_PILOT",
+    "cutoffs": [
+      {
+        "id": "EARLY",
+        "cutoff": "2022-07-17T00:00:00Z",
+        "label": "Early uncertainty check",
+        "rationale": "Tests whether a product whose conservative release interval crosses midnight is correctly withheld."
+      },
+      {
+        "id": "PRIMARY",
+        "cutoff": "2022-07-17T12:00:00Z",
+        "label": "Primary pilot cutoff",
+        "rationale": "Conservative research checkpoint admitting only the Landiras first estimate after its upper bound, while withholding La Teste-de-Buch and the later delineation. Chosen for testing information separation, not an observed emergency decision time."
+      },
+      {
+        "id": "LATER",
+        "cutoff": "2022-07-18T06:00:00Z",
+        "label": "Later comparison",
+        "rationale": "Compares documented source content after all three conservative upper bounds. Not a predictive outcome benchmark."
+      }
+    ],
+    "original_availability_verified": false,
+    "reason": "Three explicitly justified checkpoints and original provider maps; human approval pending."
+  },
+  {
+    "case_id": "FW-RC-009",
+    "stage": "DOCUMENT_RESEARCH_READY",
+    "cutoffs": [],
+    "original_availability_verified": false,
+    "reason": "Prefilled document research works; original-product temporal curation has not yet been completed. No arbitrary historical cutoff assigned."
+  },
+  {
+    "case_id": "FW-RC-010",
+    "stage": "DOCUMENT_RESEARCH_READY",
+    "cutoffs": [],
+    "original_availability_verified": false,
+    "reason": "Prefilled document research works; original-product temporal curation has not yet been completed. No arbitrary historical cutoff assigned."
+  }
+]
