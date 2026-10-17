@@ -1,0 +1,521 @@
+{
+  "id": "FW-RC-008-PILOT-BASELINE-v1",
+  "case_id": "FW-RC-008",
+  "created_at": "2026-10-17T13:23:24.834568+00:00",
+  "cutoff": "2022-07-17T12:00:00+00:00",
+  "analysis_mode": "bounded_source_product_review",
+  "mode": "deterministic_bounded_source_review",
+  "status": "CONDITIONAL_SOURCE_REVIEW_COMPLETED",
+  "severity": "NOT_ESTIMATED",
+  "strict_replay_eligible": false,
+  "human_review": "PENDING",
+  "admitted_evidence": [
+    {
+      "id": "FW-RC-008-P01-O01-v1",
+      "case_id": "FW-RC-008",
+      "product_id": "P01",
+      "claim": "The original Landiras first-estimate map depicts a burned-area thematic layer derived by visual interpretation of Sentinel-3 observations acquired on July 16 at 10:40 UTC.",
+      "topic": "fire",
+      "source_role": "original_provider_map",
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "locator": "Page 1, map legend, Map Information and Data sources",
+      "observed_at": "2022-07-16T10:40:00Z",
+      "available_at": null,
+      "verified": false,
+      "original_availability_verified": false,
+      "review_scope": "Source product inspected; conditional temporal bounding only. Human approval pending.",
+      "availability_bounds": {
+        "lower": "2022-07-16T10:40:00+00:00",
+        "upper": "2022-07-17T07:23:29+00:00",
+        "exact_availability_verified": false,
+        "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+      }
+    },
+    {
+      "id": "FW-RC-008-P01-O02-v1",
+      "case_id": "FW-RC-008",
+      "product_id": "P01",
+      "claim": "The first-estimate product states a source GSD of 300 m, estimated geometric accuracy of 600 m or better, and a minimum mapping unit of 810000 square meters. It cannot establish parcel-level damage or road passability.",
+      "topic": "other",
+      "source_role": "original_provider_map",
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "locator": "Page 1, Map Information and Data sources; final sentence is a research limitation derived from the coarse product scope",
+      "observed_at": "2022-07-16T10:40:00Z",
+      "available_at": null,
+      "verified": false,
+      "original_availability_verified": false,
+      "review_scope": "Source product inspected; conditional temporal bounding only. Human approval pending.",
+      "availability_bounds": {
+        "lower": "2022-07-16T10:40:00+00:00",
+        "upper": "2022-07-17T07:23:29+00:00",
+        "exact_availability_verified": false,
+        "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+      }
+    }
+  ],
+  "excluded_evidence": [
+    {
+      "id": "FW-RC-008-P02-O01-v1",
+      "product_id": "P02",
+      "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+    },
+    {
+      "id": "FW-RC-008-P02-O02-v1",
+      "product_id": "P02",
+      "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+    },
+    {
+      "id": "FW-RC-008-P03-O01-v1",
+      "product_id": "P03",
+      "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+    },
+    {
+      "id": "FW-RC-008-P03-O02-v1",
+      "product_id": "P03",
+      "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+    }
+  ],
+  "product_decisions": [
+    {
+      "product_id": "P01",
+      "admitted": true,
+      "reason": "CONDITIONALLY_ADMITTED_BY_CONSERVATIVE_BOUND",
+      "bounds": {
+        "lower": "2022-07-16T10:40:00+00:00",
+        "upper": "2022-07-17T07:23:29+00:00",
+        "exact_availability_verified": false,
+        "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+      },
+      "warnings": []
+    },
+    {
+      "product_id": "P02",
+      "admitted": false,
+      "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF",
+      "bounds": {
+        "lower": "2022-07-17T00:00:00+00:00",
+        "upper": "2022-07-18T00:00:00+00:00",
+        "exact_availability_verified": false,
+        "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+      },
+      "warnings": [
+        "PORTAL_PDF_CALENDAR_DATE_DIFFERENCE"
+      ]
+    },
+    {
+      "product_id": "P03",
+      "admitted": false,
+      "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF",
+      "bounds": {
+        "lower": "2022-07-17T10:26:00+00:00",
+        "upper": "2022-07-18T05:37:44+00:00",
+        "exact_availability_verified": false,
+        "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+      },
+      "warnings": []
+    }
+  ],
+  "artifact_checks": [
+    {
+      "product_id": "P01",
+      "status": "MATCH",
+      "expected_sha256": "39b4b1497fbdf32303d8f376a641ae1e287098f5338e9453053f21a747cc95fa"
+    },
+    {
+      "product_id": "P02",
+      "status": "MATCH",
+      "expected_sha256": "46808328013e486e99d77762472e7cf314469dcb743f044a23204fe5ac9cd6d0"
+    },
+    {
+      "product_id": "P03",
+      "status": "MATCH",
+      "expected_sha256": "d0fd4ebdbede85af0267d1b7f5412bd6ce976e5059db6730b1805300d517aa10"
+    }
+  ],
+  "dataset_sha256": "75040cbb82a413bf1514309c73d01d80ff99a14f97be6338a8729c8bb8dda930",
+  "technical_review": {
+    "review_id": "TECHNICAL-REVIEW-FW-RC-008-v1",
+    "reviewer_kind": "AI_ASSISTED_TECHNICAL_SOURCE_REVIEW",
+    "decision": "ACCEPT_FOR_CONDITIONAL_DOCUMENT_RESEARCH_WITH_LIMITATIONS",
+    "dataset_matches_review": true,
+    "human_approval": "PENDING"
+  },
+  "report": {
+    "case_name": "Gironde — original CEMS products pilot",
+    "supported_findings": [
+      {
+        "evidence_id": "FW-RC-008-P01-O01-v1",
+        "claim": "The original Landiras first-estimate map depicts a burned-area thematic layer derived by visual interpretation of Sentinel-3 observations acquired on July 16 at 10:40 UTC.",
+        "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+        "locator": "Page 1, map legend, Map Information and Data sources"
+      },
+      {
+        "evidence_id": "FW-RC-008-P01-O02-v1",
+        "claim": "The first-estimate product states a source GSD of 300 m, estimated geometric accuracy of 600 m or better, and a minimum mapping unit of 810000 square meters. It cannot establish parcel-level damage or road passability.",
+        "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+        "locator": "Page 1, Map Information and Data sources; final sentence is a research limitation derived from the coarse product scope"
+      }
+    ],
+    "context": {
+      "source_count": 1,
+      "record_count": 2,
+      "missing_context_topics": [
+        "access",
+        "exposure",
+        "weather"
+      ]
+    },
+    "next_steps": [
+      "Human review of source interpretation and temporal assumptions."
+    ]
+  },
+  "llm": {
+    "requested": false,
+    "evidence": null,
+    "critic": null
+  },
+  "trace": [
+    {
+      "sequence": 1,
+      "agent": "Planner",
+      "at": "2026-10-17T13:23:24.829631+00:00",
+      "inputs": {
+        "cutoff": "2022-07-17T12:00:00+00:00"
+      },
+      "output": {
+        "task": "Inspect original provider maps available under a conservative bounded-time research assumption.",
+        "scope": "Gironde, two provider mapping AOIs; no evacuation or operational decision reconstruction.",
+        "strict_mode": false
+      }
+    },
+    {
+      "sequence": 2,
+      "agent": "Evidence",
+      "at": "2026-10-17T13:23:24.834251+00:00",
+      "inputs": {
+        "task": "Inspect original provider maps available under a conservative bounded-time research assumption.",
+        "scope": "Gironde, two provider mapping AOIs; no evacuation or operational decision reconstruction.",
+        "strict_mode": false
+      },
+      "output": {
+        "admitted_ids": [
+          "FW-RC-008-P01-O01-v1",
+          "FW-RC-008-P01-O02-v1"
+        ],
+        "excluded": [
+          {
+            "id": "FW-RC-008-P02-O01-v1",
+            "product_id": "P02",
+            "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+          },
+          {
+            "id": "FW-RC-008-P02-O02-v1",
+            "product_id": "P02",
+            "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+          },
+          {
+            "id": "FW-RC-008-P03-O01-v1",
+            "product_id": "P03",
+            "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+          },
+          {
+            "id": "FW-RC-008-P03-O02-v1",
+            "product_id": "P03",
+            "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+          }
+        ],
+        "product_decisions": [
+          {
+            "product_id": "P01",
+            "admitted": true,
+            "reason": "CONDITIONALLY_ADMITTED_BY_CONSERVATIVE_BOUND",
+            "bounds": {
+              "lower": "2022-07-16T10:40:00+00:00",
+              "upper": "2022-07-17T07:23:29+00:00",
+              "exact_availability_verified": false,
+              "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+            },
+            "warnings": []
+          },
+          {
+            "product_id": "P02",
+            "admitted": false,
+            "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF",
+            "bounds": {
+              "lower": "2022-07-17T00:00:00+00:00",
+              "upper": "2022-07-18T00:00:00+00:00",
+              "exact_availability_verified": false,
+              "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+            },
+            "warnings": [
+              "PORTAL_PDF_CALENDAR_DATE_DIFFERENCE"
+            ]
+          },
+          {
+            "product_id": "P03",
+            "admitted": false,
+            "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF",
+            "bounds": {
+              "lower": "2022-07-17T10:26:00+00:00",
+              "upper": "2022-07-18T05:37:44+00:00",
+              "exact_availability_verified": false,
+              "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+            },
+            "warnings": []
+          }
+        ],
+        "integrity": [
+          {
+            "product_id": "P01",
+            "status": "MATCH",
+            "expected_sha256": "39b4b1497fbdf32303d8f376a641ae1e287098f5338e9453053f21a747cc95fa"
+          },
+          {
+            "product_id": "P02",
+            "status": "MATCH",
+            "expected_sha256": "46808328013e486e99d77762472e7cf314469dcb743f044a23204fe5ac9cd6d0"
+          },
+          {
+            "product_id": "P03",
+            "status": "MATCH",
+            "expected_sha256": "d0fd4ebdbede85af0267d1b7f5412bd6ce976e5059db6730b1805300d517aa10"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 3,
+      "agent": "Risk / Impact",
+      "at": "2026-10-17T13:23:24.834453+00:00",
+      "inputs": {
+        "evidence": {
+          "admitted_ids": [
+            "FW-RC-008-P01-O01-v1",
+            "FW-RC-008-P01-O02-v1"
+          ],
+          "excluded": [
+            {
+              "id": "FW-RC-008-P02-O01-v1",
+              "product_id": "P02",
+              "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+            },
+            {
+              "id": "FW-RC-008-P02-O02-v1",
+              "product_id": "P02",
+              "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+            },
+            {
+              "id": "FW-RC-008-P03-O01-v1",
+              "product_id": "P03",
+              "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+            },
+            {
+              "id": "FW-RC-008-P03-O02-v1",
+              "product_id": "P03",
+              "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF"
+            }
+          ],
+          "product_decisions": [
+            {
+              "product_id": "P01",
+              "admitted": true,
+              "reason": "CONDITIONALLY_ADMITTED_BY_CONSERVATIVE_BOUND",
+              "bounds": {
+                "lower": "2022-07-16T10:40:00+00:00",
+                "upper": "2022-07-17T07:23:29+00:00",
+                "exact_availability_verified": false,
+                "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+              },
+              "warnings": []
+            },
+            {
+              "product_id": "P02",
+              "admitted": false,
+              "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF",
+              "bounds": {
+                "lower": "2022-07-17T00:00:00+00:00",
+                "upper": "2022-07-18T00:00:00+00:00",
+                "exact_availability_verified": false,
+                "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+              },
+              "warnings": [
+                "PORTAL_PDF_CALENDAR_DATE_DIFFERENCE"
+              ]
+            },
+            {
+              "product_id": "P03",
+              "admitted": false,
+              "reason": "AVAILABILITY_INTERVAL_CROSSES_CUTOFF",
+              "bounds": {
+                "lower": "2022-07-17T10:26:00+00:00",
+                "upper": "2022-07-18T05:37:44+00:00",
+                "exact_availability_verified": false,
+                "basis": "BOUNDED_DELIVERY_V1: conservative methodological interval; portal timezone and downloaded-version linkage unverified."
+              },
+              "warnings": []
+            }
+          ],
+          "integrity": [
+            {
+              "product_id": "P01",
+              "status": "MATCH",
+              "expected_sha256": "39b4b1497fbdf32303d8f376a641ae1e287098f5338e9453053f21a747cc95fa"
+            },
+            {
+              "product_id": "P02",
+              "status": "MATCH",
+              "expected_sha256": "46808328013e486e99d77762472e7cf314469dcb743f044a23204fe5ac9cd6d0"
+            },
+            {
+              "product_id": "P03",
+              "status": "MATCH",
+              "expected_sha256": "d0fd4ebdbede85af0267d1b7f5412bd6ce976e5059db6730b1805300d517aa10"
+            }
+          ]
+        },
+        "llm_evidence": null
+      },
+      "output": {
+        "documented_topics": [
+          "fire",
+          "other"
+        ],
+        "severity": "NOT_ESTIMATED",
+        "limitations": [
+          "No road-status or evacuation inference from a map base layer.",
+          "No confirmed population occupancy or individual outcomes.",
+          "CEMS products are not independent field corroboration."
+        ]
+      }
+    },
+    {
+      "sequence": 4,
+      "agent": "Decision",
+      "at": "2026-10-17T13:23:24.834457+00:00",
+      "inputs": {
+        "documented_topics": [
+          "fire",
+          "other"
+        ],
+        "severity": "NOT_ESTIMATED",
+        "limitations": [
+          "No road-status or evacuation inference from a map base layer.",
+          "No confirmed population occupancy or individual outcomes.",
+          "CEMS products are not independent field corroboration."
+        ]
+      },
+      "output": {
+        "status": "CONDITIONAL_SOURCE_REVIEW_COMPLETED",
+        "admission_count": 2,
+        "next_action": "Human review of source interpretation and temporal assumptions."
+      }
+    },
+    {
+      "sequence": 5,
+      "agent": "Critic",
+      "at": "2026-10-17T13:23:24.834460+00:00",
+      "inputs": {
+        "status": "CONDITIONAL_SOURCE_REVIEW_COMPLETED",
+        "admission_count": 2,
+        "next_action": "Human review of source interpretation and temporal assumptions."
+      },
+      "output": {
+        "technical_review": {
+          "review_id": "TECHNICAL-REVIEW-FW-RC-008-v1",
+          "reviewer_kind": "AI_ASSISTED_TECHNICAL_SOURCE_REVIEW",
+          "decision": "ACCEPT_FOR_CONDITIONAL_DOCUMENT_RESEARCH_WITH_LIMITATIONS",
+          "dataset_matches_review": true,
+          "human_approval": "PENDING"
+        },
+        "concerns": [
+          "Delivery timezone unknown.",
+          "Historical downloaded-version to delivery linkage not verified.",
+          "AOI02 portal delivery and PDF production have different calendar dates.",
+          "No actual responder receipt or operational validation established."
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "agent": "Safety",
+      "at": "2026-10-17T13:23:24.834466+00:00",
+      "inputs": {
+        "decision": {
+          "status": "CONDITIONAL_SOURCE_REVIEW_COMPLETED",
+          "admission_count": 2,
+          "next_action": "Human review of source interpretation and temporal assumptions."
+        },
+        "critic": {
+          "technical_review": {
+            "review_id": "TECHNICAL-REVIEW-FW-RC-008-v1",
+            "reviewer_kind": "AI_ASSISTED_TECHNICAL_SOURCE_REVIEW",
+            "decision": "ACCEPT_FOR_CONDITIONAL_DOCUMENT_RESEARCH_WITH_LIMITATIONS",
+            "dataset_matches_review": true,
+            "human_approval": "PENDING"
+          },
+          "concerns": [
+            "Delivery timezone unknown.",
+            "Historical downloaded-version to delivery linkage not verified.",
+            "AOI02 portal delivery and PDF production have different calendar dates.",
+            "No actual responder receipt or operational validation established."
+          ]
+        },
+        "llm_critic": null
+      },
+      "output": {
+        "status": "CONDITIONAL_SOURCE_REVIEW_COMPLETED",
+        "operational_use": false,
+        "human_review_required": true,
+        "strict_replay_eligible": false
+      }
+    },
+    {
+      "sequence": 7,
+      "agent": "Human Gate",
+      "at": "2026-10-17T13:23:24.834469+00:00",
+      "inputs": {
+        "status": "CONDITIONAL_SOURCE_REVIEW_COMPLETED",
+        "operational_use": false,
+        "human_review_required": true,
+        "strict_replay_eligible": false
+      },
+      "output": {
+        "status": "PENDING",
+        "authority": "Research assumptions and source interpretation only."
+      }
+    },
+    {
+      "sequence": 8,
+      "agent": "Reporter",
+      "at": "2026-10-17T13:23:24.834474+00:00",
+      "inputs": {
+        "status": "CONDITIONAL_SOURCE_REVIEW_COMPLETED",
+        "operational_use": false,
+        "human_review_required": true,
+        "strict_replay_eligible": false
+      },
+      "output": {
+        "finding_ids": [
+          "FW-RC-008-P01-O01-v1",
+          "FW-RC-008-P01-O02-v1"
+        ],
+        "withheld_ids": [
+          "FW-RC-008-P02-O01-v1",
+          "FW-RC-008-P02-O02-v1",
+          "FW-RC-008-P03-O01-v1",
+          "FW-RC-008-P03-O02-v1"
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Delivery timezone unknown.",
+    "Historical downloaded-version to delivery linkage not verified.",
+    "AOI02 portal delivery and PDF production have different calendar dates.",
+    "No actual responder receipt or operational validation established.",
+    "No road-status or evacuation inference from a map base layer.",
+    "No confirmed population occupancy or individual outcomes.",
+    "CEMS products are not independent field corroboration."
+  ],
+  "content_sha256": "ec8c0e77999199a66276a8b2f18c1c51ab78c8c5ed6c4ca55059891ab1dc221b"
+}
