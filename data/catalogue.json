@@ -1,0 +1,337 @@
+[
+  {
+    "id": "FW-RC-001",
+    "name": "Camp Fire",
+    "country": "United States",
+    "period": "2018-11",
+    "scope": "single incident",
+    "summary": "Fire progression and community exposure. NIST reconstructed the event from field observations.",
+    "research_question": "How did evidence available at a selected time describe community exposure?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-001-S01",
+        "publisher": "NIST",
+        "title": "A Case Study of the Camp Fire - Fire Progression Timeline",
+        "url": "https://www.nist.gov/publications/case-study-camp-fire-fire-progression-timeline",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      },
+      {
+        "id": "FW-RC-001-S02",
+        "publisher": "NIST",
+        "title": "Camp Fire - NETTRA",
+        "url": "https://www.nist.gov/publications/case-study-camp-fire-notification-evacuation-traffic-and-temporary-refuge-areas-nettra",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  },
+  {
+    "id": "FW-RC-002",
+    "name": "Lahaina",
+    "country": "United States",
+    "period": "2023-08",
+    "scope": "single incident",
+    "summary": "The Hawaii Attorney General commissioned an independent investigation; phased reports cover the timeline and contributing factors.",
+    "research_question": "Which original records can support a time-specific account without importing later findings?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-002-S01",
+        "publisher": "Hawaii Attorney General",
+        "title": "Maui Wildfire Investigation Resource Page",
+        "url": "https://ag.hawaii.gov/maui-wildfire-investigation-resources-page/",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      },
+      {
+        "id": "FW-RC-002-S02",
+        "publisher": "UL Research Institutes / FSRI",
+        "title": "Lahaina Fire Comprehensive Timeline Report",
+        "url": "https://fsri.org/research-update/lahaina-fire-comprehensive-timeline-report-released-attorney-general-hawaii",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  },
+  {
+    "id": "FW-RC-003",
+    "name": "Pedrógão Grande",
+    "country": "Portugal",
+    "period": "2017-06",
+    "scope": "incident and surrounding fires",
+    "summary": "NASA documented fires around Pedrógão Grande on June 18 after fires broke out on June 17.",
+    "research_question": "How should early observations and later revisions be distinguished?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-003-S01",
+        "publisher": "NASA",
+        "title": "Fires in Portugal",
+        "url": "https://science.nasa.gov/earth/earth-observatory/fires-in-portugal-90423/",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      },
+      {
+        "id": "FW-RC-003-S02",
+        "publisher": "Copernicus CAMS",
+        "title": "Monitoring the impact of the Portugal wildfires",
+        "url": "https://atmosphere.copernicus.eu/cams-monitoring-impact-portugal-wildfires",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  },
+  {
+    "id": "FW-RC-004",
+    "name": "Pantanal",
+    "country": "Brazil",
+    "period": "2020",
+    "scope": "regional episode",
+    "summary": "Satellite observations documented extensive burning in the Pantanal during 2020. This dossier covers a regional episode rather than a single ignition.",
+    "research_question": "Which spatial and temporal subset should become a reproducible retrospective study?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-004-S01",
+        "publisher": "NASA",
+        "title": "Fires Char the Pantanal",
+        "url": "https://science.nasa.gov/earth/earth-observatory/fires-char-the-pantanal-147269/",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  },
+  {
+    "id": "FW-RC-005",
+    "name": "Black Summer — southeastern Australia",
+    "country": "Australia",
+    "period": "2019–2020",
+    "scope": "regional episode",
+    "summary": "NASA documented fires and smoke over southeastern Australia in January 2020. A narrower local incident must be selected for decision-level evaluation.",
+    "research_question": "How do smoke observations differ from local fire-front observations?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-005-S01",
+        "publisher": "NASA",
+        "title": "Fires and Smoke Engulf Southeastern Australia",
+        "url": "https://science.nasa.gov/earth/earth-observatory/fires-and-smoke-engulf-southeastern-australia-146110/",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  },
+  {
+    "id": "FW-RC-006",
+    "name": "Fort McMurray",
+    "country": "Canada",
+    "period": "2016-05",
+    "scope": "single incident",
+    "summary": "Landsat observed fire southwest of downtown on May 3. NASA described expanding evacuation orders.",
+    "research_question": "Which observation and publication timestamps can be established for each record?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-006-S01",
+        "publisher": "NASA",
+        "title": "Wildfire in Fort McMurray",
+        "url": "https://science.nasa.gov/earth/earth-observatory/wildfire-in-fort-mcmurray-87985/",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  },
+  {
+    "id": "FW-RC-007",
+    "name": "Mati / eastern Attica",
+    "country": "Greece",
+    "period": "2018-07",
+    "scope": "single incident within regional outbreak",
+    "summary": "NASA reported fast-moving fires around Mati and separately described Kineta. These locations must remain distinct in evidence records.",
+    "research_question": "Can each observation be attributed to Mati rather than another Attica fire?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-007-S01",
+        "publisher": "NASA",
+        "title": "Athens, Greece Surrounded by Two Huge, Deadly Wildfires",
+        "url": "https://www.nasa.gov/image-article/athens-greece-surrounded-by-two-huge-deadly-wildfires/",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  },
+  {
+    "id": "FW-RC-008",
+    "name": "Landiras / La Teste-de-Buch — Gironde",
+    "country": "France",
+    "period": "2022-07",
+    "scope": "paired incidents",
+    "summary": "Copernicus EMS activation EMSR592 covers the July fires at Landiras and La Teste-de-Buch.",
+    "research_question": "Can successive mapping products be separated by incident and release time?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-008-S01",
+        "publisher": "Copernicus EMS",
+        "title": "EMSR592",
+        "url": "https://mapping.emergency.copernicus.eu/activations/EMSR592/DELINEATION/",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  },
+  {
+    "id": "FW-RC-009",
+    "name": "Northern Evia",
+    "country": "Greece",
+    "period": "2021-08",
+    "scope": "island episode",
+    "summary": "ESA documented northern Evia burn scars and evacuations by sea; NASA supplied complementary satellite views.",
+    "research_question": "What did each satellite product establish, and when was that product available?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-009-S01",
+        "publisher": "ESA",
+        "title": "Wildfires ravage Greek island of Evia",
+        "url": "https://www.esa.int/ESA_Multimedia/Images/2021/08/Wildfires_ravage_Greek_island_of_Evia",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      },
+      {
+        "id": "FW-RC-009-S02",
+        "publisher": "NASA",
+        "title": "Fire Consumes Large Swaths of Greece",
+        "url": "https://science.nasa.gov/earth/earth-observatory/fire-consumes-large-swaths-of-greece-148682/",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  },
+  {
+    "id": "FW-RC-010",
+    "name": "Valparaíso / Viña del Mar",
+    "country": "Chile",
+    "period": "2024-02",
+    "scope": "regional outbreak",
+    "summary": "NASA described fire spread from hills into urban areas. DLR produced satellite-based maps of the event.",
+    "research_question": "Can original fire-perimeter products support a cutoff-specific reconstruction?",
+    "status": "PREFILLED_RETROSPECTIVE_RESEARCH",
+    "unknowns": [
+      "Original responder information access and precise availability times remain unverified.",
+      "Independent corroboration and full-report/raw-record checks remain pending.",
+      "No validated prediction, historical decision baseline or operational risk score."
+    ],
+    "sources": [
+      {
+        "id": "FW-RC-010-S01",
+        "publisher": "NASA",
+        "title": "Inferno Scars Valparaíso",
+        "url": "https://science.nasa.gov/earth/earth-observatory/inferno-scars-valparaiso-152417/",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      },
+      {
+        "id": "FW-RC-010-S02",
+        "publisher": "DLR ZKI",
+        "title": "Wildfires in Chile",
+        "url": "https://www.dlr.de/en/zki/latest/news/2024/wildfires-in-chile",
+        "role": "research_only",
+        "reviewed_on": "2026-10-16",
+        "review_method": "Web page content inspected; full report and original records not systematically reviewed.",
+        "published_at": null,
+        "availability_at": null
+      }
+    ]
+  }
+]
