@@ -1,0 +1,55 @@
+FIREWATCH AI — REAL CASES v0.4 | VERSÃO FINAL DESTE CICLO DE PESQUISA
+
+Extraia TODO o ZIP. Abra a pasta no PyCharm com Python 3.12 e execute main.py.
+Não precisa instalar pacotes pip. Mantenha as pastas originals, data e pilot.
+
+O QUE ESTÁ PRONTO
+- Os 10 casos e 30 registros documentais da v0.3 permanecem disponíveis.
+- Primeiro dossiê aprofundado: Gironde — Landiras / La Teste-de-Buch.
+- 3 mapas originais do Copernicus, 6 registros, hashes e fontes.
+- 3 cortes temporais justificados e comparação entre os produtos admitidos.
+- Primeiro relatório já preparado e revisão técnica identificada como feita por IA.
+- Aprovação humana vinculada ao nome, justificativa, checklist e execução.
+
+A aplicação abre em Reviewed pilot:
+1. Open original PDF: consulte os mapas originais.
+2. Open first reviewed dossier: leia o relatório preparado, sem chamada de API.
+3. Run pilot cutoff: execute o corte selecionado, com Gemini opcional.
+4. History & review: selecione a execução, registre seu nome e justificativa,
+   confira os três itens e aceite o registro de pesquisa ou peça correção.
+
+EARLY: nenhum produto admitido pelo intervalo conservador.
+PRIMARY: somente o primeiro mapa Landiras (2 registros).
+LATER: os três mapas (6 registros).
+O horário de entrega exibido no portal não tem fuso e há uma diferença de
+calendário entre entrega e produção em um produto. O sistema mantém isso
+explícito. A admissão é condicional, não uma prova de disponibilidade exata
+nem do que os responsáveis pela resposta sabiam durante o incêndio.
+
+A REVISÃO TÉCNICA FOI FEITA POR IA. SUA APROVAÇÃO HUMANA NÃO FOI INVENTADA.
+O dossiê está preparado para a sua revisão na interface.
+
+PARA OS DEZ CASOS
+Abra Analysis e use Retrospective documents (prefilled), Run analysis ou
+Analyze all 10 cases. O menu Open view permite acessar abas em telas menores.
+Os outros nove casos continuam em pesquisa documental; a curadoria temporal
+de produtos originais foi aprofundada somente neste primeiro piloto.
+
+GEMINI
+Em Gemini settings, configure sua chave, teste a conexão e habilite o envio.
+O padrão é gemini-2.5-flash, editável conforme o acesso da sua conta.
+Os gates determinísticos continuam ativos. A validação autenticada da API
+precisa ser feita localmente. A interface Windows ainda precisa de conferência
+visual no seu computador.
+
+EXPORTAÇÃO
+Export case ZIP inclui o dossiê, evidências, revisão técnica, relatórios,
+traces, aprovações humanas registradas e mapas originais do piloto.
+Export all cases reúne os dez casos. Os avisos e créditos dos mapas permanecem.
+
+DADOS ANTERIORES
+Feche ambos os aplicativos. Copie a pasta workspace da versão anterior para
+a pasta desta versão antes de abri-la. Os registros anteriores são preservados.
+Não publique a chave .env ou bancos com dados privados.
+
+Veja pilot/FIRST_REVIEWED_DOSSIER.md e README.md para método e limites.
