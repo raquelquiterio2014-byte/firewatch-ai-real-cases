@@ -1,0 +1,201 @@
+{
+  "version": "0.4.0-pilot-v1",
+  "case_id": "FW-RC-008",
+  "scope": "Gironde, two provider mapping AOIs; no evacuation or operational decision reconstruction.",
+  "products": [
+    {
+      "id": "P01",
+      "file": "originals/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "sha256": "39b4b1497fbdf32303d8f376a641ae1e287098f5338e9453053f21a747cc95fa",
+      "bytes": 5279098,
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "portal_url": "https://mapping.emergency.copernicus.eu/activations/EMSR592/DELINEATION/",
+      "aoi": "Landiras (AOI01)",
+      "kind": "First Estimate",
+      "observed_at": "2022-07-16T10:40:00Z",
+      "production_on_utc": "2022-07-16",
+      "delivery_local_without_timezone": "2022-07-16 19:23:29",
+      "delivery_timezone": null,
+      "exact_availability_verified": false,
+      "version_delivery_link_verified": false,
+      "producer": "GAF AG; released by SERTIT",
+      "retrieved_on": "2026-10-17",
+      "attribution": "Copernicus Emergency Management Service (© 2022 European Union), [EMSR592] Landiras (AOI01): First Estimate Map",
+      "limitations": [
+        "Provider map product, not independently reprocessed raw satellite data.",
+        "Portal delivery time has no timezone; the downloaded version is not authenticated against a historical web capture."
+      ],
+      "warnings": []
+    },
+    {
+      "id": "P02",
+      "file": "originals/EMSR592_AOI02_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "sha256": "46808328013e486e99d77762472e7cf314469dcb743f044a23204fe5ac9cd6d0",
+      "bytes": 4312091,
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI02_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "portal_url": "https://mapping.emergency.copernicus.eu/activations/EMSR592/DELINEATION/",
+      "aoi": "La Teste-de-Buch (AOI02)",
+      "kind": "First Estimate",
+      "observed_at": "2022-07-16T10:40:00Z",
+      "production_on_utc": "2022-07-17",
+      "delivery_local_without_timezone": "2022-07-16 22:34:46",
+      "delivery_timezone": null,
+      "exact_availability_verified": false,
+      "version_delivery_link_verified": false,
+      "producer": "ITHACA; released by SERTIT",
+      "retrieved_on": "2026-10-17",
+      "attribution": "Copernicus Emergency Management Service (© 2022 European Union), [EMSR592] La Teste-de-Buch (AOI02): First Estimate Map",
+      "limitations": [
+        "Provider map product, not independently reprocessed raw satellite data.",
+        "Portal delivery time has no timezone; the downloaded version is not authenticated against a historical web capture."
+      ],
+      "warnings": [
+        "PORTAL_PDF_CALENDAR_DATE_DIFFERENCE"
+      ]
+    },
+    {
+      "id": "P03",
+      "file": "originals/EMSR592_AOI01_DEL_PRODUCT_r1_RTP01_v1.pdf",
+      "sha256": "d0fd4ebdbede85af0267d1b7f5412bd6ce976e5059db6730b1805300d517aa10",
+      "bytes": 12034818,
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_DEL_PRODUCT_r1_RTP01_v1.pdf",
+      "portal_url": "https://mapping.emergency.copernicus.eu/activations/EMSR592/DELINEATION/",
+      "aoi": "Landiras (AOI01)",
+      "kind": "Delineation",
+      "observed_at": "2022-07-17T10:26:00Z",
+      "production_on_utc": "2022-07-17",
+      "delivery_local_without_timezone": "2022-07-17 17:37:44",
+      "delivery_timezone": null,
+      "exact_availability_verified": false,
+      "version_delivery_link_verified": false,
+      "producer": "GAF AG; released by SERTIT",
+      "retrieved_on": "2026-10-17",
+      "attribution": "Copernicus Emergency Management Service (© 2022 European Union), [EMSR592] Landiras (AOI01): Delineation Map",
+      "limitations": [
+        "Provider map product, not independently reprocessed raw satellite data.",
+        "Portal delivery time has no timezone; the downloaded version is not authenticated against a historical web capture."
+      ],
+      "warnings": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "FW-RC-008-P01-O01-v1",
+      "case_id": "FW-RC-008",
+      "product_id": "P01",
+      "claim": "The original Landiras first-estimate map depicts a burned-area thematic layer derived by visual interpretation of Sentinel-3 observations acquired on July 16 at 10:40 UTC.",
+      "topic": "fire",
+      "source_role": "original_provider_map",
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "locator": "Page 1, map legend, Map Information and Data sources",
+      "observed_at": "2022-07-16T10:40:00Z",
+      "available_at": null,
+      "verified": false,
+      "original_availability_verified": false,
+      "review_scope": "Source product inspected; conditional temporal bounding only. Human approval pending."
+    },
+    {
+      "id": "FW-RC-008-P01-O02-v1",
+      "case_id": "FW-RC-008",
+      "product_id": "P01",
+      "claim": "The first-estimate product states a source GSD of 300 m, estimated geometric accuracy of 600 m or better, and a minimum mapping unit of 810000 square meters. It cannot establish parcel-level damage or road passability.",
+      "topic": "other",
+      "source_role": "original_provider_map",
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "locator": "Page 1, Map Information and Data sources; final sentence is a research limitation derived from the coarse product scope",
+      "observed_at": "2022-07-16T10:40:00Z",
+      "available_at": null,
+      "verified": false,
+      "original_availability_verified": false,
+      "review_scope": "Source product inspected; conditional temporal bounding only. Human approval pending."
+    },
+    {
+      "id": "FW-RC-008-P02-O01-v1",
+      "case_id": "FW-RC-008",
+      "product_id": "P02",
+      "claim": "The original La Teste-de-Buch first-estimate map shows a burned-area layer based on Sentinel-3 observations from July 16 at 10:40 UTC.",
+      "topic": "fire",
+      "source_role": "original_provider_map",
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI02_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "locator": "Page 1, title, legend, Data sources and Relevant date records (UTC)",
+      "observed_at": "2022-07-16T10:40:00Z",
+      "available_at": null,
+      "verified": false,
+      "original_availability_verified": false,
+      "review_scope": "Source product inspected; conditional temporal bounding only. Human approval pending."
+    },
+    {
+      "id": "FW-RC-008-P02-O02-v1",
+      "case_id": "FW-RC-008",
+      "product_id": "P02",
+      "claim": "The PDF records July 17 as map-production date, while the portal lists delivery on July 16 at 22:34:46 without a timezone. The calendar-date difference requires reconciliation and does not establish an exact publication instant.",
+      "topic": "other",
+      "source_role": "original_provider_map",
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI02_FEP_PRODUCT_r1_RTP01_v1.pdf",
+      "locator": "Page 1, Relevant date records (UTC), compared with EMSR592 portal AOI02 First Estimate card",
+      "observed_at": "2022-07-16T10:40:00Z",
+      "available_at": null,
+      "verified": false,
+      "original_availability_verified": false,
+      "review_scope": "Source product inspected; conditional temporal bounding only. Human approval pending."
+    },
+    {
+      "id": "FW-RC-008-P03-O01-v1",
+      "case_id": "FW-RC-008",
+      "product_id": "P03",
+      "claim": "The later Landiras delineation map uses SPOT6/7 imagery acquired on July 17 at 10:26 UTC and separately identifies active flames and burned areas.",
+      "topic": "fire",
+      "source_role": "original_provider_map",
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_DEL_PRODUCT_r1_RTP01_v1.pdf",
+      "locator": "Page 1, title, legend and Data sources",
+      "observed_at": "2022-07-17T10:26:00Z",
+      "available_at": null,
+      "verified": false,
+      "original_availability_verified": false,
+      "review_scope": "Source product inspected; conditional temporal bounding only. Human approval pending."
+    },
+    {
+      "id": "FW-RC-008-P03-O02-v1",
+      "case_id": "FW-RC-008",
+      "product_id": "P03",
+      "claim": "The delineation map lists estimated affected population of 447 and affected built-up area of 25.0 hectares. These are map-derived exposure estimates, not casualties or verified occupancy.",
+      "topic": "exposure",
+      "source_role": "original_provider_map",
+      "source_url": "https://cems-mapping-website.s3.eu-west-1.amazonaws.com/static/activations/EMSR592/EMSR592_AOI01_DEL_PRODUCT_r1_RTP01_v1.pdf",
+      "locator": "Page 1, Consequences within the AOI table; final sentence is a research interpretation of the estimated-population field",
+      "observed_at": "2022-07-17T10:26:00Z",
+      "available_at": null,
+      "verified": false,
+      "original_availability_verified": false,
+      "review_scope": "Source product inspected; conditional temporal bounding only. Human approval pending."
+    }
+  ],
+  "policy": {
+    "id": "BOUNDED_DELIVERY_V1",
+    "offset_hours_min": -12,
+    "offset_hours_max": 14,
+    "production_timezone": "UTC",
+    "rule": "Interpret timezone-unspecified portal delivery over all offsets -12 through +14 hours. Lower bound is max(observation UTC, production-day UTC start, earliest possible delivery UTC). Conservative upper bound is max(production-day UTC end, latest possible delivery UTC). These are methodological bounds, not measured publication times.",
+    "limitation": "The bounds assume the portal delivery card relates to the downloaded version. This link is not historically verified. Never promote to strict responder-time replay or claim actual receipt by responders."
+  },
+  "checkpoints": [
+    {
+      "id": "EARLY",
+      "cutoff": "2022-07-17T00:00:00Z",
+      "label": "Early uncertainty check",
+      "rationale": "Tests whether a product whose conservative release interval crosses midnight is correctly withheld."
+    },
+    {
+      "id": "PRIMARY",
+      "cutoff": "2022-07-17T12:00:00Z",
+      "label": "Primary pilot cutoff",
+      "rationale": "Conservative research checkpoint admitting only the Landiras first estimate after its upper bound, while withholding La Teste-de-Buch and the later delineation. Chosen for testing information separation, not an observed emergency decision time."
+    },
+    {
+      "id": "LATER",
+      "cutoff": "2022-07-18T06:00:00Z",
+      "label": "Later comparison",
+      "rationale": "Compares documented source content after all three conservative upper bounds. Not a predictive outcome benchmark."
+    }
+  ]
+}
