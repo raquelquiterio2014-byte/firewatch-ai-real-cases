@@ -90,7 +90,7 @@ def analyze_pilot(cutoff=None,gateway=None,data=None,root=None,strict=False):
 def initialize_pilot(store):
     path=ROOT/'pilot/first_dossier_run.json'
     if not path.exists():return
-    r=json.loads(path.read_text())
+    r=json.loads(path.read_text(encoding='utf-8'))
     if not store.db.execute('SELECT 1 FROM runs WHERE id=?',(r['id'],)).fetchone():store.save_run(r)
 
 def save_human_review(store,run_id,reviewer,decision,note,checks):

@@ -1,3 +1,7 @@
+v0.5: 101 automated development tests passed (77 existing + 24 grounded-search/reassessment fixtures). Original provider PDF hashes preserved. Live Gemini/Google Search and target Windows acceptance pending. See WEB_UPDATES_V05.md.
+
+Previous v0.4 record follows:
+
 Build date: 2026-10-17
 Final release of the v0.1-v0.4 software research cycle.
 Python compilation: main.py, core.py, research.py, pilot.py, gemini_gateway.py, run_pilot.py passed.

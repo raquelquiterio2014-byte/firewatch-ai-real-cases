@@ -8,12 +8,13 @@ from core import Store, catalogue, analyze, export_bundle
 from gemini_gateway import GeminiGateway, MODEL, load_key
 from research import initialize_research, evidence_for, analyze_research, render_report, run_batch
 from pilot import dataset as pilot_dataset, technical_review, verify_artifacts, availability_bounds, analyze_pilot, initialize_pilot, save_human_review, artifact_path
+from updates import UpdateGateway, initialize_updates, discovered_for, latest_update, run_update, save_update, search_document
 
 class App:
     def __init__(self,root):
         self.root=root; self.store=Store(); self.cases=catalogue(); self.current_run=None
-        initialize_research(self.store);initialize_pilot(self.store)
-        root.title('FireWatch AI — Real Cases | Final research release v0.4')
+        initialize_research(self.store);initialize_pilot(self.store);initialize_updates(self.store)
+        root.title('FireWatch AI — Real Cases | Web Updates & Reassessment v0.5')
         self.busy=False;self.jobs=queue.Queue()
         root.geometry('1120x760');root.minsize(820,600)
         style=ttk.Style();style.theme_use('clam')
@@ -21,7 +22,7 @@ class App:
         style.configure('TButton',padding=6);style.configure('TNotebook.Tab',padding=(6,7))
         header=tk.Frame(root,bg='#182c32');header.pack(fill='x')
         tk.Label(header,text='FireWatch AI — Real Cases',fg='white',bg='#182c32',font=('Segoe UI',21,'bold')).pack(anchor='w',padx=18,pady=(12,0))
-        tk.Label(header,text='Sourced dossiers • Retrospective evidence • Human research review',fg='#ffb56b',bg='#182c32',font=('Segoe UI',11)).pack(anchor='w',padx=18,pady=(0,12))
+        tk.Label(header,text='Fresh web research • Evidence history • Human-intervention reassessment',fg='#ffb56b',bg='#182c32',font=('Segoe UI',11)).pack(anchor='w',padx=18,pady=(0,12))
         bar=ttk.Frame(root);bar.pack(fill='x',padx=12,pady=10)
         self.choice=ttk.Combobox(bar,state='readonly',values=[f"{c['id']} | {c['name']} | {c['country']}" for c in self.cases],width=80)
         self.choice.pack(side='left',fill='x',expand=True);self.choice.current(0);self.choice.bind('<<ComboboxSelected>>',lambda e:self.load())
@@ -34,7 +35,7 @@ class App:
         self.source_list.pack(fill='x',padx=8,pady=8)
         ttk.Button(self.sources_tab,text='Open selected source',command=self.open_source).pack(anchor='w',padx=8)
         self.source_text=self.add_text(self.sources_tab)
-        self.prefilled=self.text_tab('Prefilled evidence');self.make_evidence_tab();self.make_gemini_tab();self.make_analysis_tab();self.make_pilot_tab();self.trace=self.text_tab('Agent trace');self.make_review_tab()
+        self.prefilled=self.text_tab('Prefilled evidence');self.make_evidence_tab();self.make_gemini_tab();self.make_analysis_tab();self.make_pilot_tab();self.make_updates_tab();self.trace=self.text_tab('Agent trace');self.make_review_tab()
         navigation=ttk.Frame(root);navigation.pack(fill='x',padx=12)
         ttk.Label(navigation,text='Open view:').pack(side='left')
         self.view=ttk.Combobox(navigation,state='readonly',values=[self.tabs.tab(t,'text') for t in self.tabs.tabs()],width=28);self.view.pack(side='left',padx=6)
@@ -43,7 +44,7 @@ class App:
         self.status=tk.StringVar(value='');ttk.Label(root,textvariable=self.status).pack(fill='x',padx=12,pady=(0,8))
         self.choice.current(7)
         self.load()
-        self.tabs.select(self.pilot_tab)
+        self.tabs.select(self.updates_tab)
         root.after(100,self.poll_jobs)
     @property
     def case(self):return self.cases[self.choice.current()]
@@ -65,6 +66,49 @@ class App:
         self.show(self.results,'Ready: 3 prefilled research records for this case. Use Run analysis or Analyze all 10 cases. Gemini is optional and can be enabled in Gemini settings. Document mode does not require an event-time cutoff.')
         runs=self.store.runs(c['id']);self.history['values']=[r['id'] for r in runs];self.history.set('')
         self.show(self.review_text,[]);self.cutoff.set('');self.status.set(f"{c['id']} | {len(c['sources'])} research sources | {len(runs)} saved runs | 3 prefilled research records — ready to analyze")
+        self.show_latest_update()
+
+    def make_updates_tab(self):
+        self.updates_tab=ttk.Frame(self.tabs);self.tabs.add(self.updates_tab,text='Web updates')
+        ttk.Label(self.updates_tab,text='Search now with Gemini + Google Search, then reassess human research intervention.',wraplength=900).pack(anchor='w',padx=8,pady=7)
+        self.update_question=tk.StringVar(value='Find newly available publications, corrections and evidence about this historical case. What needs human research attention now?')
+        ttk.Entry(self.updates_tab,textvariable=self.update_question).pack(fill='x',padx=8,pady=5)
+        bar=ttk.Frame(self.updates_tab);bar.pack(fill='x',padx=8,pady=5)
+        self.update_button=ttk.Button(bar,text='Search updates & reassess',command=self.refresh_web);self.update_button.pack(side='left')
+        ttk.Button(bar,text='Open cited sources & search suggestions',command=self.open_update_sources).pack(side='left',padx=6)
+        self.update_summary=tk.StringVar(value='No update yet. Each click starts a fresh external search; keys/models are configured in Gemini settings.')
+        ttk.Label(self.updates_tab,textvariable=self.update_summary,wraplength=950).pack(anchor='w',padx=8,pady=5)
+        ttk.Label(self.updates_tab,text='Newly discovered is not necessarily newly published. This mode uses current research, not historical responder-time replay. No research intervention requested does not mean human approval or operational safety.',wraplength=950).pack(anchor='w',padx=8,pady=5)
+        self.update_text=self.add_text(self.updates_tab)
+
+    def show_latest_update(self):
+        self.current_update=latest_update(self.store,self.case['id'])
+        if self.current_update:
+            self.show(self.update_text,render_report(self.current_update))
+            review=self.current_update['review_assessment']
+            self.update_summary.set('Research intervention: '+review['recommendation']+' | '+str(len(self.current_update['new_record_ids']))+' newly discovered records | Saved '+self.current_update['created_at'])
+        else:
+            self.show(self.update_text,'No web update has been run for this case. Configure the Gemini key, then Search updates & reassess.')
+            self.update_summary.set('No web update for this case. Each click performs a fresh search and saves a new assessment.')
+
+    def refresh_web(self):
+        if self.busy:return
+        if not self.api_key.get().strip():
+            messagebox.showinfo('Web updates','Configure the session API key in Gemini settings first.');return
+        case_id=self.case['id'];question=self.update_question.get().strip()
+        if not question:
+            messagebox.showerror('Web updates','Enter the research question.');return
+        known=discovered_for(self.store,case_id);previous=latest_update(self.store,case_id)
+        gateway=UpdateGateway(self.api_key.get(),self.model.get())
+        self.begin_job('web_update',lambda:run_update(case_id,question,gateway,known,previous,
+            on_progress=lambda stage:self.jobs.put(('update_progress',case_id,stage,None))),case_id)
+
+    def open_update_sources(self):
+        if not getattr(self,'current_update',None):return
+        from core import ROOT
+        path=ROOT/'workspace'/('search-'+self.current_update['id']+'.html')
+        path.parent.mkdir(parents=True,exist_ok=True);path.write_text(search_document(self.current_update['discovery']),encoding='utf-8')
+        webbrowser.open(path.as_uri())
     def open_source(self):
         selected=self.source_list.selection()
         if selected:webbrowser.open(next(s['url'] for s in self.case['sources'] if s['id']==selected[0]))
@@ -174,7 +218,7 @@ class App:
     def begin_job(self,kind,fn,case_id=None):
         if self.busy:
             messagebox.showinfo('Working','Wait for the current request to finish.');return
-        self.busy=True;self.choice.configure(state='disabled');self.run_button.configure(state='disabled');self.probe_button.configure(state='disabled');self.pilot_run_button.configure(state='disabled');self.batch_button.configure(state='disabled');self.mode_choice.configure(state='disabled')
+        self.busy=True;self.choice.configure(state='disabled');self.run_button.configure(state='disabled');self.probe_button.configure(state='disabled');self.pilot_run_button.configure(state='disabled');self.batch_button.configure(state='disabled');self.mode_choice.configure(state='disabled');self.update_button.configure(state='disabled')
         self.status.set('Working… Gemini requests have bounded timeouts and retries.')
         def worker():
             try:self.jobs.put((kind,case_id,fn(),None))
@@ -183,13 +227,15 @@ class App:
     def poll_jobs(self):
         try:
             kind,case_id,result,err=self.jobs.get_nowait()
-            if kind=='batch_progress':
+            if kind=='update_progress':
+                self.status.set('Web research — completed: '+result)
+            elif kind=='batch_progress':
                 n,total,r=result
                 try:self.store.save_run(r)
                 except Exception:self.status.set('A batch run could not be saved; check database permissions.')
                 self.batch_summary.set(f'{n}/{total} completed | {case_id} | {r["mode"]}')
             else:
-                self.busy=False;self.choice.configure(state='readonly');self.run_button.configure(state='normal');self.probe_button.configure(state='normal');self.pilot_run_button.configure(state='normal');self.mode_choice.configure(state='readonly');self.set_mode()
+                self.busy=False;self.choice.configure(state='readonly');self.run_button.configure(state='normal');self.probe_button.configure(state='normal');self.pilot_run_button.configure(state='normal');self.mode_choice.configure(state='readonly');self.update_button.configure(state='normal');self.set_mode()
                 if err:messagebox.showerror('Task error',err);self.status.set(err)
                 elif kind=='probe':
                     self.show(self.probe_text,result);self.status.set('Connection: '+result['source']+' / '+result['reason'])
@@ -201,7 +247,9 @@ class App:
                     self.show(self.results,'\n'.join(summary));self.refresh_history();self.status.set('Batch complete. Export all cases to save the ten dossiers and reports.')
                 else:
                     try:
-                        self.store.save_run(result);self.refresh_history();self.history.set(result['id']);self.select_run()
+                        if kind=='web_update':save_update(self.store,result);self.show_latest_update()
+                        else:self.store.save_run(result)
+                        self.refresh_history();self.history.set(result['id']);self.select_run()
                         self.status.set('Saved run | '+result['mode']+' | '+result['status'])
                     except Exception:messagebox.showerror('Save error','The run could not be saved. Check database permissions.')
         except queue.Empty:pass
@@ -252,6 +300,9 @@ class App:
         self.current_run=next((r for r in self.store.runs(self.case['id']) if r['id']==self.history.get()),None)
         if self.current_run:
             self.show(self.results,render_report(self.current_run));self.show(self.trace,self.current_run['trace']);self.show(self.review_text,self.store.reviews(self.current_run['id']))
+            if self.current_run.get('analysis_mode')=='dynamic_research_update':
+                self.current_update=self.current_run;self.show(self.update_text,render_report(self.current_run))
+                self.update_summary.set('Selected saved update | '+self.current_run['created_at']+' | Research intervention: '+self.current_run['review_assessment']['recommendation'])
     def review(self):
         try:
             if not self.current_run:raise ValueError('Select a saved run first.')

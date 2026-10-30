@@ -81,6 +81,9 @@ def analyze_research(case_id,evidence,gateway=None,as_of='2026-10-17'):
     return payload
 
 def render_report(r):
+    if r.get('analysis_mode')=='dynamic_research_update':
+        from updates import render_update_report
+        return render_update_report(r)
     lines=[f"FIREWATCH AI — {r.get('report',{}).get('case_name',r['case_id'])}",f"Analysis: {r.get('analysis_mode','historical_cutoff')}",f"Engine: {r['mode']}",f"Status: {r['status']}",f"Run: {r['id']}",'Human research review: PENDING in original run; see linked reviews.','']
     if r.get('analysis_mode')=='bounded_source_product_review':
         lines += ['PILOT CUTOFF: '+r['cutoff'],'Technical source review: AI assistant; independent human approval remains pending.','Strict responder-time replay eligible: FALSE','']

@@ -1,10 +1,24 @@
-# FireWatch AI — Real Cases v0.4
+# FireWatch AI — Real Cases v0.5
 
-Final release of this research cycle · Raquel Cruz · 17 October 2026
+Web discovery and research reassessment · Raquel Cruz · 30 October 2026
+
+## Corrected workflow: find new information and reassess human intervention
+
+The new **Web updates** workspace implements the intended discovery cycle: **fresh Gemini + Google Search → source-linked passages → evidence assessment → separate Critic assessment → reassessed need for human research intervention → new saved run**. Each click on **Search updates & reassess** makes a new external search. This is not a scheduled background monitor.
+
+Unlike the earlier document-only workflow, the input set can grow. Provider search queries, citation links, retrieved times, attributed passages and call outcomes are saved. Exact passage/source combinations are deduplicated. A newly discovered record may describe an old event or an old publication; retrieval time is never presented as publication time or historical availability. These records are **search-grounded model syntheses**, not original-source quotations or independently authenticated facts.
+
+The new research recommendation is **REQUIRED** or **NOT_REQUESTED**. Either assessment can request intervention; local checks require it after search/citation/output failures, unresolved gaps or open issues. An earlier issue stays open unless new cited evidence supports a resolution and both the evidence assessment and the Critic explicitly agree. Such a resolution is labeled model reassessment, not human approval. Earlier runs and human acceptance records are never overwritten. This recommendation concerns document research, not firefighting decisions, and does not establish operational safety.
+
+The source-search request enables `google_search` and accepts only returned segments linked to provider grounding sources and actual search-query metadata. The subsequent two structured requests cannot browse and receive only the selected evidence. There are at most **3 logical calls / 9 HTTP attempts per refresh** (25-second attempt timeout, bounded transient-error retries). Missing key and invalid outputs produce explicit fallback and retain the previous evidence. Source suggestions and citations can be opened from the interface and are included in case exports.
+
+**Development verification:** 101 automated tests passed, including 24 new offline search/reassessment tests. Original PDF hashes and all 77 earlier checks still pass. Actual live Google Search/Gemini and manual Windows acceptance of v0.5 remain pending. Transport fixtures are explicitly labeled `injected_transport`.
+
+Start with [the v0.5 guide](docs/WEB_UPDATES_V05.md). The v0.4 workflows below remain available for document research and historical-cutoff study. Their fixed historical cutoffs do not apply to the new current-research workspace.
 
 Ten real wildfire case dossiers now include **30 prefilled source-attributed research records**, three per case. Select a case and click **Run analysis**, or click **Analyze all 10 cases**. No manual evidence registration or event-time cutoff is needed for the default document mode.
 
-## Four-version development history
+## Previous v0.1–v0.4 development history
 
 | Release | Main change | Development validation |
 |---|---|---|
@@ -15,7 +29,7 @@ Ten real wildfire case dossiers now include **30 prefilled source-attributed res
 
 These counts describe the development checks for each milestone. They are not historical prediction scores. Authenticated live Gemini validation, independent human approval of the first pilot and target Windows GUI visual acceptance remain pending for this project.
 
-This repository contains the latest v0.4 source. Earlier version numbers describe the development sequence; this initial publication does not claim separate Git tags, releases or a commit history for v0.1–v0.3.
+This repository contains v0.5 source, extending the earlier research cycle. Earlier version numbers describe the development sequence; this initial publication does not claim separate Git tags, releases or a commit history for v0.1–v0.3.
 
 ## First curated and technically reviewed dossier
 
@@ -34,7 +48,7 @@ Read `pilot/FIRST_REVIEWED_DOSSIER.md`, `docs/CUTOFF_METHOD.md`, `data/curated_p
 1. Extract the ZIP completely.
 2. Open the extracted folder in PyCharm with Python 3.12.
 3. Run `main.py`, or double-click `run_gui.bat`.
-4. The app opens on **Reviewed pilot**; inspect originals and the first reviewed dossier.
+4. The app opens on **Web updates**; configure the key to search and reassess. **Reviewed pilot** retains the original-product dossier.
 5. To run all ten document cases, open **Analysis**. The **Open view** menu exposes every tab on smaller screens.
 6. Keep **Retrospective documents (prefilled)** selected, then run one case or all ten.
 
@@ -51,7 +65,7 @@ Step-by-step setup, pilot and ten-case execution, report reading, Gemini setting
 
 Open **Gemini settings**, enter a masked session key, test the connection and enable Gemini for analysis. Keys can also be supplied through `GEMINI_API_KEY` or a local `.env` copied from `.env.example`. The default model is editable: `gemini-2.5-flash`. Model access depends on your Google account. The app never substitutes a model automatically.
 
-Gemini Evidence reviews the admitted claim text; Gemini Critic receives that structured output and the same evidence. Local checks enforce JSON shape, known evidence IDs, matching quoted claim excerpts and mandatory human review. They do not establish semantic correctness. The deterministic report always remains available. No model tools, external browsing or automatic source ingestion are enabled.
+Gemini Evidence reviews the admitted claim text; Gemini Critic receives that structured output and the same evidence. Local checks enforce JSON shape, known evidence IDs, matching quoted claim excerpts and mandatory human review. They do not establish semantic correctness. The deterministic report always remains available. These older document and cutoff modes do not browse. The separate v0.5 Web updates mode explicitly enables Google Search.
 
 A full batch normally uses two Gemini calls per case, up to 20 logical calls, with bounded retries for transient errors. After persistent quota/authentication/model-access failure in one case, remaining cases complete using an explicitly marked fallback without further API calls. The interface remains responsive. Closing the app before a result is received can lose the current case execution; already saved batch cases remain stored.
 
@@ -123,6 +137,6 @@ The automated checks cover the document workflow, strict original mode and condi
 
 See `LEIA-ME-PRIMEIRO.txt`, `docs/GEMINI_SETUP_PT.md` and `docs/RESEARCH_PROTOCOL.md`. Three official CEMS map products are redistributed unchanged with attribution and their existing notices. The institutional article text and raw satellite scenes are not redistributed. Source anchors are short navigation aids. No open-source license is assigned automatically.
 
-## Final release scope
+## Earlier v0.4 release scope
 
 This closes the v0.1–v0.4 software iteration: sourced catalogue, prefilled document analysis, optional Gemini integration, original source-product curation, justified conditional checkpoints, a first AI-technically-reviewed dossier, human review and export. It does not claim completion of independent historical validation or original-product curation for all ten cases.

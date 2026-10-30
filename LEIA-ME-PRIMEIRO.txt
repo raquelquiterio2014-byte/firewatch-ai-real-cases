@@ -1,3 +1,9 @@
+FIREWATCH AI — REAL CASES v0.5 | BUSCA WEB E REANÁLISE
+
+A nova aba Web updates busca informações com Gemini + Google Search e reavalia a necessidade de intervenção humana na pesquisa. Cada clique faz uma nova consulta; configure a chave em Gemini settings. Leia docs/WEB_UPDATES_V05.md.
+
+Os modos documentais e históricos da v0.4 continuam disponíveis. As orientações abaixo descrevem esses modos anteriores.
+
 FIREWATCH AI — REAL CASES v0.4 | VERSÃO FINAL DESTE CICLO DE PESQUISA
 
 Extraia TODO o ZIP. Abra a pasta no PyCharm com Python 3.12 e execute main.py.

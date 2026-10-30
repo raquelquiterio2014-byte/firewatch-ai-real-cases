@@ -1,0 +1,4 @@
+# Curated dataset is covered by a frozen technical-review file hash.
+data/curated_pilot.json -text
+data/pilot_technical_review.json -text
+*.pdf -text

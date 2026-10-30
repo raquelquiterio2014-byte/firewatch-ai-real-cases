@@ -148,6 +148,12 @@ def export_bundle(store,case_id,destination):
             path=artifact_path(product)
             if path.is_file():files[product['file']]=path.read_bytes()
         files['originals/ATTRIBUTION.txt']=(ROOT/'originals/ATTRIBUTION.txt').read_bytes()
+    if store.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='discovered_records'").fetchone():
+        from updates import discovered_for, search_document
+        files['discovered_records.json']=json.dumps(discovered_for(store,case_id),ensure_ascii=False,indent=2).encode('utf-8')
+        for r in runs:
+            if r.get('analysis_mode')=='dynamic_research_update':
+                files['search/'+r['id']+'.html']=search_document(r['discovery']).encode('utf-8')
     files['trace.jsonl']=''.join(json.dumps(dict(run_id=r['id'],**t),ensure_ascii=False)+'\n' for r in runs for t in r['trace']).encode('utf-8')
     stream=io.StringIO(newline=''); fields=['id','publisher','title','url','role','reviewed_on']
     writer=csv.DictWriter(stream,fieldnames=fields,extrasaction='ignore'); writer.writeheader();writer.writerows(case['sources'])

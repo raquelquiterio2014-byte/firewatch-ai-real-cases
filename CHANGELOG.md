@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0 — 30 October 2026
+
+- Corrected the intended workflow: fresh Gemini + Google Search, cited discoveries, dependent analysis and Critic, and reassessed human research intervention.
+- Added a dedicated Web updates UI, explicit REQUIRED/NOT_REQUESTED recommendations, retained issue IDs and two-assessment resolutions backed by new evidence.
+- Preserved immutable historical runs and the original cutoff modes; added transactional history links, discovery deduplication, source/suggestion HTML and export integration.
+- Development validation: 101 tests, including 24 new offline update tests. Original map hashes preserved. Live grounded-search and target-Windows acceptance pending.
+
 ## 0.4.0 — 17 October 2026
 
 - Curated original CEMS EMSR592 First Estimate and Delineation map products for the first Gironde dossier; preserved provider credits and original PDF bytes.
