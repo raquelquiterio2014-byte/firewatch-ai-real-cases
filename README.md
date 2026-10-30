@@ -110,6 +110,8 @@ After a batch, select a case and its saved run in **History & review**. Save a n
 
 ## Original maps and attribution
 
+The named v0.5 ZIP includes the original maps. A GitHub source checkout carries the manifest; run `py -3.12 download_originals.py` to fetch those three provider files and verify their original byte counts and SHA-256 hashes. CI runs this explicit restoration before testing. Already matching files are reused; a nonmatching local file is backed up before replacement.
+
 Copernicus Emergency Management Service (© 2022 European Union), EMSR592: Landiras (AOI01) First Estimate and Delineation Maps; La Teste-de-Buch (AOI02) First Estimate Map. Provider credits and third-party notices are retained inside the unchanged PDFs. See `originals/ATTRIBUTION.txt` and the provider citation guidance at https://mapping.emergency.copernicus.eu/about/citation-guidelines/. No raw satellite imagery is separately redistributed. Source hashes establish downloaded-file identity, not independent measurement accuracy or historical availability.
 
 ## Existing data

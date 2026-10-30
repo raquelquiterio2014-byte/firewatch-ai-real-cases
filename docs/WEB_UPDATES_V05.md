@@ -10,6 +10,7 @@ Each explicit click runs a new Gemini request with Google Search enabled, regist
 
 1. Keep the v0.4 folder. Extract the new folder **FireWatch_Real_Cases_v0_5**.
 2. Run `main.py` with Python 3.12, or double-click `run_gui.bat`. No additional packages are required.
+   The named ZIP includes the three original map PDFs. If you clone or download the GitHub source archive instead, run `py -3.12 download_originals.py` first to restore the map files from the official provider and verify their recorded hashes. This is separate from live Gemini web discovery.
 3. Open **Gemini settings**, enter your masked session key and choose an available model. Default remains `gemini-2.5-flash`; the app never silently changes models. A JSON connection probe does not validate search access.
 4. Select one of the ten historical cases. Open **Web updates**, enter a focused research question and click **Search updates & reassess**. This explicitly enables external search and subsequent analysis, independently of the older analysis-mode checkbox.
 5. Inspect `Newly discovered records`, the research-intervention recommendation and the reasons. Open **cited sources & search suggestions** to see the provider-linked passages. The returned links can be Google redirect URLs; no original-source identity or historical availability is inferred from them.
