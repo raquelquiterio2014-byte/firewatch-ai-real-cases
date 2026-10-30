@@ -1,4 +1,4 @@
-v0.5: 101 automated development tests passed (77 existing + 24 grounded-search/reassessment fixtures). Original provider PDF hashes preserved. Live Gemini/Google Search and target Windows acceptance pending. See WEB_UPDATES_V05.md.
+Revision 2: 101 automated development tests passed (77 existing + 24 grounded-search/reassessment fixtures). Original provider PDF hashes preserved. Live Gemini/Google Search and target Windows acceptance pending. See REVISION_2_WEB_UPDATES.md.
 
 Previous v0.4 record follows:
 

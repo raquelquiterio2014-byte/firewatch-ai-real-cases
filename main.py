@@ -8,13 +8,13 @@ from core import Store, catalogue, analyze, export_bundle
 from gemini_gateway import GeminiGateway, MODEL, load_key
 from research import initialize_research, evidence_for, analyze_research, render_report, run_batch
 from pilot import dataset as pilot_dataset, technical_review, verify_artifacts, availability_bounds, analyze_pilot, initialize_pilot, save_human_review, artifact_path
-from updates import UpdateGateway, initialize_updates, discovered_for, latest_update, run_update, save_update, search_document
+from updates import RELEASE_NAME, UpdateGateway, initialize_updates, discovered_for, latest_update, run_update, save_update, search_document
 
 class App:
     def __init__(self,root):
         self.root=root; self.store=Store(); self.cases=catalogue(); self.current_run=None
         initialize_research(self.store);initialize_pilot(self.store);initialize_updates(self.store)
-        root.title('FireWatch AI — Real Cases | Web Updates & Reassessment v0.5')
+        root.title(RELEASE_NAME + ' | Web Updates & Reassessment')
         self.busy=False;self.jobs=queue.Queue()
         root.geometry('1120x760');root.minsize(820,600)
         style=ttk.Style();style.theme_use('clam')

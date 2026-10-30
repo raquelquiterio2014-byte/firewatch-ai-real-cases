@@ -16,7 +16,8 @@ from urllib.parse import urlsplit
 from core import catalogue, now
 from gemini_gateway import MODEL, post_json, RequestFailed, OutputInvalid
 
-VERSION = '0.5.0'
+REVISION = 2
+RELEASE_NAME = 'FireWatch AI — Real Cases — Revision 2'
 LIMITATIONS = [
     'Search-grounded passages are model syntheses with provider citations; original page content is not independently authenticated.',
     'Newly discovered does not mean newly published. Retrieval time is not event time or historical availability.',
@@ -341,7 +342,7 @@ def run_update(case_id, question, gateway, known=(), previous=None, on_progress=
     audits = [a for a in (discovery, assessed, critic) if a]
     complete = len(audits) == 3 and all(a['succeeded'] for a in audits)
     payload = dict(id=str(uuid.uuid4()), case_id=case_id, created_at=now(), analysis_mode='dynamic_research_update',
-        mode='llm_assisted' if complete else 'explicit_fallback', status='RESEARCH_REVIEW_REQUIRED' if required else 'ROUTINE_RESEARCH_UPDATE',
+        revision=REVISION, mode='llm_assisted' if complete else 'explicit_fallback', status='RESEARCH_REVIEW_REQUIRED' if required else 'ROUTINE_RESEARCH_UPDATE',
         severity='NOT_ESTIMATED', cutoff=None, human_review='PENDING' if required else 'NOT_REQUESTED_NOT_APPROVED',
         previous_run_id=(previous or {}).get('id'), previous_run_sha256=(previous or {}).get('content_sha256'), question=question.strip(),
         discovery=discovery, llm={'requested': True, 'evidence': assessed, 'critic': critic},
@@ -370,7 +371,7 @@ def save_update(store, run):
 
 def render_update_report(run):
     review = run['review_assessment']
-    lines = ['FIREWATCH AI — DYNAMIC RESEARCH UPDATE', run['report']['case_name'],
+    lines = ['FIREWATCH AI — REAL CASES — REVISION 2', run['report']['case_name'],
         'Run: ' + run['id'], 'Research time: ' + run['created_at'],
         'Previous update: ' + str(run['previous_run_id'] or 'None'),
         'Research question: ' + run['question'],

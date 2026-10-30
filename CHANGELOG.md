@@ -1,6 +1,8 @@
 # Changelog
 
-## 0.5.0 — 30 October 2026
+## Revision 2 — 30 October 2026
+
+- Corrected public numbering: this is Revision 2 of the independent FireWatch AI — Real Cases project. Earlier v0.1–v0.4 are internal stages of Revision 1; the synthetic V1–V6 project remains separate.
 
 - Corrected the intended workflow: fresh Gemini + Google Search, cited discoveries, dependent analysis and Critic, and reassessed human research intervention.
 - Added a dedicated Web updates UI, explicit REQUIRED/NOT_REQUESTED recommendations, retained issue IDs and two-assessment resolutions backed by new evidence.

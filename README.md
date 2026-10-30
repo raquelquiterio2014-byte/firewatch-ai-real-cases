@@ -1,6 +1,8 @@
-# FireWatch AI — Real Cases v0.5
+# FireWatch AI — Real Cases — Revision 2
 
 Web discovery and research reassessment · Raquel Cruz · 30 October 2026
+
+**Project numbering:** this independent project uses Revision 1 and Revision 2. The earlier v0.1–v0.4 labels describe internal stages of Revision 1. The original FireWatch AI synthetic laboratory has its own V1–V6 sequence.
 
 ## Corrected workflow: find new information and reassess human intervention
 
@@ -12,13 +14,13 @@ The new research recommendation is **REQUIRED** or **NOT_REQUESTED**. Either ass
 
 The source-search request enables `google_search` and accepts only returned segments linked to provider grounding sources and actual search-query metadata. The subsequent two structured requests cannot browse and receive only the selected evidence. There are at most **3 logical calls / 9 HTTP attempts per refresh** (25-second attempt timeout, bounded transient-error retries). Missing key and invalid outputs produce explicit fallback and retain the previous evidence. Source suggestions and citations can be opened from the interface and are included in case exports.
 
-**Development verification:** 101 automated tests passed, including 24 new offline search/reassessment tests. Original PDF hashes and all 77 earlier checks still pass. Actual live Google Search/Gemini and manual Windows acceptance of v0.5 remain pending. Transport fixtures are explicitly labeled `injected_transport`.
+**Development verification:** 101 automated tests passed, including 24 new offline search/reassessment tests. Original PDF hashes and all 77 earlier checks still pass. Actual live Google Search/Gemini and manual Windows acceptance of Revision 2 remain pending. Transport fixtures are explicitly labeled `injected_transport`.
 
-Start with [the v0.5 guide](docs/WEB_UPDATES_V05.md). The v0.4 workflows below remain available for document research and historical-cutoff study. Their fixed historical cutoffs do not apply to the new current-research workspace.
+Start with [the Revision 2 guide](docs/REVISION_2_WEB_UPDATES.md). The v0.4 workflows below remain available for document research and historical-cutoff study. Their fixed historical cutoffs do not apply to the new current-research workspace.
 
 Ten real wildfire case dossiers now include **30 prefilled source-attributed research records**, three per case. Select a case and click **Run analysis**, or click **Analyze all 10 cases**. No manual evidence registration or event-time cutoff is needed for the default document mode.
 
-## Previous v0.1–v0.4 development history
+## Revision 1 — internal v0.1–v0.4 development history
 
 | Release | Main change | Development validation |
 |---|---|---|
@@ -29,7 +31,7 @@ Ten real wildfire case dossiers now include **30 prefilled source-attributed res
 
 These counts describe the development checks for each milestone. They are not historical prediction scores. Authenticated live Gemini validation, independent human approval of the first pilot and target Windows GUI visual acceptance remain pending for this project.
 
-This repository contains v0.5 source, extending the earlier research cycle. Earlier version numbers describe the development sequence; this initial publication does not claim separate Git tags, releases or a commit history for v0.1–v0.3.
+This repository contains Revision 2 source, extending the earlier research cycle. Earlier version numbers describe the development sequence; this initial publication does not claim separate Git tags, releases or a commit history for v0.1–v0.3.
 
 ## First curated and technically reviewed dossier
 
@@ -54,7 +56,7 @@ Read `pilot/FIRST_REVIEWED_DOSSIER.md`, `docs/CUTOFF_METHOD.md`, `data/curated_p
 
 No pip installation is needed. Standard Python with Tkinter is sufficient.
 
-## User manuals
+## Revision 1 user manuals (historical v0.4 package)
 
 - [English user manual](docs/FireWatch_AI_v0_4_User_Manual_EN.pdf)
 - [Manual em português](docs/Manual_FireWatch_AI_v0_4_PT.pdf)
@@ -65,7 +67,7 @@ Step-by-step setup, pilot and ten-case execution, report reading, Gemini setting
 
 Open **Gemini settings**, enter a masked session key, test the connection and enable Gemini for analysis. Keys can also be supplied through `GEMINI_API_KEY` or a local `.env` copied from `.env.example`. The default model is editable: `gemini-2.5-flash`. Model access depends on your Google account. The app never substitutes a model automatically.
 
-Gemini Evidence reviews the admitted claim text; Gemini Critic receives that structured output and the same evidence. Local checks enforce JSON shape, known evidence IDs, matching quoted claim excerpts and mandatory human review. They do not establish semantic correctness. The deterministic report always remains available. These older document and cutoff modes do not browse. The separate v0.5 Web updates mode explicitly enables Google Search.
+Gemini Evidence reviews the admitted claim text; Gemini Critic receives that structured output and the same evidence. Local checks enforce JSON shape, known evidence IDs, matching quoted claim excerpts and mandatory human review. They do not establish semantic correctness. The deterministic report always remains available. These older document and cutoff modes do not browse. The separate Revision 2 Web updates mode explicitly enables Google Search.
 
 A full batch normally uses two Gemini calls per case, up to 20 logical calls, with bounded retries for transient errors. After persistent quota/authentication/model-access failure in one case, remaining cases complete using an explicitly marked fallback without further API calls. The interface remains responsive. Closing the app before a result is received can lose the current case execution; already saved batch cases remain stored.
 
@@ -110,7 +112,7 @@ After a batch, select a case and its saved run in **History & review**. Save a n
 
 ## Original maps and attribution
 
-The named v0.5 ZIP includes the original maps. A GitHub source checkout carries the manifest; run `py -3.12 download_originals.py` to fetch those three provider files and verify their original byte counts and SHA-256 hashes. CI runs this explicit restoration before testing. Already matching files are reused; a nonmatching local file is backed up before replacement.
+The named Revision 2 ZIP includes the original maps. A GitHub source checkout carries the manifest; run `py -3.12 download_originals.py` to fetch those three provider files and verify their original byte counts and SHA-256 hashes. CI runs this explicit restoration before testing. Already matching files are reused; a nonmatching local file is backed up before replacement.
 
 Copernicus Emergency Management Service (© 2022 European Union), EMSR592: Landiras (AOI01) First Estimate and Delineation Maps; La Teste-de-Buch (AOI02) First Estimate Map. Provider credits and third-party notices are retained inside the unchanged PDFs. See `originals/ATTRIBUTION.txt` and the provider citation guidance at https://mapping.emergency.copernicus.eu/about/citation-guidelines/. No raw satellite imagery is separately redistributed. Source hashes establish downloaded-file identity, not independent measurement accuracy or historical availability.
 
